@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block Titulo %} Editar Cuenta {% endblock %}
+
+{% block Contenido %}
+
+        <div class="card">
+        <div class="card-header">
+            Editar informacion del Usuario
+        </div>
+        <div class="card-body">
+            <h4 class="card-title">Datos del Usuario</h4>
+
+            {% include 'Sesion/Form.html' %}
+
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block Titulo %} Proovedores {% endblock %}
+
+{% block Contenido %}
+
+    <div class="card">
+        <div class="card-header">
+            Catalogo de Proovedores
+        </div>
+        <div class="card-body">
+            <h4 class="card-title">Proovedores</h4>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Empresa</th>
+                    <th>Telefono</th>
+                    <th>Orden</th>
+                    <th>Entregado</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                {% for Proovedores in proovedores %}
+                <tr>
+                    <td>{{ Proovedores.ID }}</td>
+                    <td>{{ Proovedores.Empresa}}</td>
+                    <td>{{ Proovedores.Telefono }}</td>
+                    <td>{{ Proovedores.Orden }}</td>
+                    <td>{{ Proovedores.Entregado }}</td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+{% endblock %}

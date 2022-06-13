@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block Titulo %} Agregar nuevo juego {% endblock %}
+
+{% block Contenido %}
+
+    <div class="card">
+        <div class="card-header">
+            Agregar un Juego
+        </div>
+        <div class="card-body">
+            <h4 class="card-title">Datos del juego</h4>
+
+            {% include 'Articulos/Form.html' %}
+
+        </div>
+    </div>
+
+{% endblock %}

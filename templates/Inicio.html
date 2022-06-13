@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block Titulo %} Inicio {% endblock %}
+
+{% block Contenido %}
+
+    <div class="jumbotron">
+        <h1 class="display-3">Bienvenido a Juegos Don Pepe </h1>
+
+        <form action="#">
+            <div class="mb-4">
+                <label for="email" class="form-label">Correo Electronico</label>
+                <input type="email" class="form-control" name="email">
+            </div>
+            <div class="mb-4">
+                <label for="password" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" name="password">
+            </div>
+        </form>
+
+        <hr class="my-2">
+
+        <p class="lead">
+            <a class="btn btn-primary btn-lg" href="{% url 'Articulos' %}" type="submit" role="button">Iniciar Sesion</a>
+            <a class="btn btn-success btn-lg" href="{% url 'Registro' %}" role="button">Registrarme</a>
+        </p>
+    </div>
+
+{% endblock %}

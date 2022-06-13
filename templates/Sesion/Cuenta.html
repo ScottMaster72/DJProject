@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block Titulo %} Cuenta {% endblock %}
+
+{% block Contenido %}
+
+    <div class="card">
+        <div class="card-header">
+
+        </div>
+        <div class="card-body">
+            <h4 class="card-title">Cuenta</h4>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Telefono</th>
+                    <th>Correo</th>
+
+                </tr>
+                </thead>
+                <tbody>
+                
+                    {% for Registros in Registro %}
+                    <tr>
+                    <td>{{ Registros.id }}</td>
+                    <td>{{ Registros.nombre }}</td>
+                    <td>{{ Registros.telefono }}</td>
+                    <td>{{ Registros.email }}</td>
+                    <td>
+                        <a name="" id="" class="btn btn-primary" href="{% url 'Editar_Sesion' Registros.id %}" role="button">Editar</a>
+                        |
+                        <a name="" id="" class="btn btn-danger" href="{% url 'Borrar' Registros.id %}" role="button">Borrar</a> </td>
+                    </tr>
+                    {% endfor %}
+
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+{% endblock %}

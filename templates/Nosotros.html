@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block Titulo %} ¿Quienes Somos? {% endblock %}
+
+{% block Contenido %}
+    <div class="h1">Nosotros:</div>
+    <div class="h3">Somos una empresa que se dedica a la distribucion de juegos de video en el interior de la
+        republica mexicana, facilitando la compra-venta y el transporte de los mismo para que lleguen a
+        mas personas en el pais.</div>
+    <br>
+    <br>
+    <div class="card">
+        <div class="card-header h1">
+            Sucursales
+        </div>
+        <div class="card-body">
+
+        <table class="table">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Direccion</th>
+                <th>Telefono</th>
+            </tr>
+            </thead>
+            <tbody>
+
+            {% for Nosotros in Sucursales %}
+                <tr>
+                    <td>{{ Nosotros.Id }}</td>
+                    <td>{{ Nosotros.Nombre }}</td>
+                    <td>{{ Nosotros.Direccion }}</td>
+                    <td>{{ Nosotros.Telefono }}</td>
+                </tr>
+            {% endfor %}
+
+            </tbody>
+        </table>
+            
+        </div>
+    </div>
+{% endblock %}
+
+ Sucursales

@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block Titulo %} Pedido {% endblock %}
+
+{% block Contenido %}
+
+    <div class="card">
+        <div class="card-header">
+            <a name="" id="" class="btn btn-success" href="{% url 'crearp' %}" role="button">Generar Nuevo Pedido</a>
+        </div>
+        <div class="card-body">
+            <h4 class="card-title">Pedidos</h4>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Descripcion</th>
+                    <th>Fecha</th>
+                    <th>Estatus del pedido</th>
+                    <th>Acciones</th>
+
+                </tr>
+                </thead>
+                <tbody>
+
+                    {% for Pedido in pedido %}
+                    <tr>
+                    <td>{{ Pedido.Id }}</td>
+                    <td>{{ Pedido.Descripcion }}</td>
+                    <td>{{ Pedido.Fecha }}</td>
+                    <td>{{ Pedido.Estatus }}</td>
+
+                    <td><a name="" id="" class="btn btn-info" href="{% url 'editarp' Pedido.Id %}" role="button">Editar</a>
+                    </tr>
+                    {% endfor %}
+
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+{% endblock %}

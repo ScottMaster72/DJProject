@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block Titulo %} Formulario de Registro {% endblock %}
+
+{% block Contenido %}
+
+    <div class="card">
+        <div class="card-header">
+            Resistrar Usuario
+        </div>
+        <div class="card-body">
+            <h4 class="card-title">Datos del Usuario</h4>
+
+            {% include 'Sesion/Form.html' %}
+
+        </div>
+    </div>
+
+{% endblock %}
+

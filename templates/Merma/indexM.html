@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block Titulo %} Reporte de Merma {% endblock %}
+
+{% block Contenido %}
+
+    <div class="card">
+        <div class="card-header">
+            Reporte de Merma
+        </div>
+        <div class="card-body">
+            <h4 class="card-title">Merma</h4>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Observaciones</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                {% for Merma in merma %}
+                <tr>
+                    <td>{{ Merma.Id }}</td>
+                    <td>{{ Merma.Nombre }}</td>
+                    <td>{{ Merma.Observaciones }}</td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+{% endblock %}

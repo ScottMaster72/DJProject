@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block Titulo %} Promociones {% endblock %}
+
+{% block Contenido %}
+
+    <div class="card">
+        <div class="card-header">
+            Catalogo de Promociones
+        </div>
+        <div class="card-body">
+            <h4 class="card-title">Promociones</h4>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Empresa</th>
+                    <th>Telefono</th>
+                    <th>Orden</th>
+                    <th>Entregado</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                {% for Promociones in promociones %}
+                <tr>
+                    <td>{{ Promociones.ID }}</td>
+                    <td>{{ Promociones.Nombre}}</td>
+                    <td>{{ Promociones.Fecha}}</td>
+                    <td>{{ Promociones.Descripcion}}</td>
+                    <td>{{ Promociones.Descuento}}</td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+{% endblock %}
